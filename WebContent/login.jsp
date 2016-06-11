@@ -48,8 +48,8 @@ li a:hover:not(.active) {
 </head>
 <body>
 <ul>
-  <li><a class="active" href="index.jsp">HOME</a></li>
-  <li><a href="login.jsp">LOGIN</a></li>
+  <li><a  href="index.jsp">HOME</a></li>
+  <li><a  class="active" href="login.jsp">LOGIN</a></li>
   <li><a href="brands.jsp">BRANDS</a></li>  
   <li><a href="#ourstores">OURSTORES</a></li>
   <li><a href="#services and support">ABOUTUS</a></li>

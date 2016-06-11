@@ -48,7 +48,7 @@ li a:hover:not(.active) {
 </head>
 <body>
 <ul>
-  <li><a class="active" href="#HOME">HOME</a></li>
+  <li><a class="active" href="index.jsp">HOME</a></li>
   <li><a href="login.jsp">LOGIN</a></li>
   <li><a href="brands.jsp">BRANDS</a></li>  
   <li><a href="ourstores.jsp">OURSTORES</a></li>
