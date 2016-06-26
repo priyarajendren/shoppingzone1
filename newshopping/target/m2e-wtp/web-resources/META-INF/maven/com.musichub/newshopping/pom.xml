@@ -1,0 +1,137 @@
+<?xml version="1.0"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xmlns="http://maven.apache.org/POM/4.0.0">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.musichub</groupId>
+  <artifactId>newshopping</artifactId>
+  <packaging>war</packaging>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>newshopping Maven Webapp</name>
+  <url>http://maven.apache.org</url>
+  <properties>
+<org.springframework-version>4.3.0.RELEASE</org.springframework-version>
+
+</properties>
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+    	<!-- spring-context which provides core functionality -->
+		<dependency>
+    	<groupId>org.springframework</groupId>
+    	<artifactId>spring-core</artifactId>
+    	<version>4.2.5.RELEASE</version>
+    </dependency>
+    <dependency>
+    	<groupId>org.springframework</groupId>
+    	<artifactId>spring-web</artifactId>
+    	<version>4.2.5.RELEASE</version>
+    </dependency>
+    <dependency>
+    	<groupId>org.springframework</groupId>
+    	<artifactId>spring-webmvc</artifactId>
+    	<version>4.2.5.RELEASE</version>
+    </dependency>
+    <dependency>
+    	<groupId>org.springframework</groupId>
+    	<artifactId>spring-context</artifactId>
+    	<version>4.2.5.RELEASE</version>
+    </dependency>
+    
+    
+    	<!-- https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api -->
+<dependency>
+    <groupId>javax.servlet</groupId>
+    <artifactId>javax.servlet-api</artifactId>
+    <version>3.1.0</version>
+</dependency>
+<dependency>
+    <groupId>org.springframework.data</groupId>
+    <artifactId>spring-data-jpa</artifactId>
+    <version>1.7.0.RELEASE</version>
+</dependency>
+
+
+		
+		<!-- Database Dependencies -->
+    <dependency>
+		<groupId>com.h2database</groupId>
+		<artifactId>h2</artifactId>
+		<version>1.4.191</version>
+	</dependency>
+	
+	<dependency>
+		<groupId>org.hibernate</groupId>
+		<artifactId>hibernate-core</artifactId>
+		<version>4.3.11.Final</version>
+	</dependency>
+	
+	<dependency>
+<groupId>taglibs</groupId>
+<artifactId>standard</artifactId>
+<version>1.1.2</version>
+<scope>compile</scope>
+</dependency>
+
+<dependency>
+		<groupId>commons-dbcp</groupId>
+		<artifactId>commons-dbcp</artifactId>
+		<version>1.2.2</version>
+	</dependency>
+		
+		
+		
+    <dependency>
+        <groupId>org.hibernate</groupId>
+        <artifactId>hibernate-entitymanager</artifactId>
+        <version>4.3.7.Final</version> <!-- change version if required-->
+    </dependency>
+    <dependency>
+        <groupId>org.hibernate</groupId>
+        <artifactId>hibernate-validator</artifactId>
+        <version>4.3.2.Final</version> <!-- change version if required-->
+    </dependency>
+
+		
+		
+    <!-- https://mvnrepository.com/artifact/javax.servlet/jstl -->
+<dependency>
+    	<groupId>jstl</groupId>
+    	<artifactId>jstl</artifactId>
+    	<version>1.2</version>
+    </dependency>
+    
+    <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-context-support</artifactId>
+        <version>4.1.6.RELEASE</version>
+    </dependency>
+
+
+    <!-- Spring Security -->
+    <dependency>
+        <groupId>org.springframework.security</groupId>
+        <artifactId>spring-security-web</artifactId>
+        <version>4.0.1.RELEASE</version>
+    </dependency>
+    <dependency>
+        <groupId>org.springframework.security</groupId>
+        <artifactId>spring-security-config</artifactId>
+        <version>4.0.1.RELEASE</version>
+    </dependency>
+    <dependency>
+        <groupId>org.springframework.security</groupId>
+        <artifactId>spring-security-core</artifactId>
+        <version>4.0.1.RELEASE</version>
+    </dependency>
+    
+    
+  </dependencies>
+  <build>
+    <finalName>newshopping</finalName>
+  </build>
+</project>
