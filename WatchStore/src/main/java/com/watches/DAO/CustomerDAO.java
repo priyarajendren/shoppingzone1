@@ -6,9 +6,10 @@ import com.watches.model.Customer;
 
 public interface CustomerDAO {
 	
-	public void addCustomer(Customer c);
-	public void delCustomer(int id);
-	public void updateCustomer(Customer c);
-	public List<Customer> viewAllCustomers();
+	public Customer findById(Integer id);
+	public List<Customer> getItems();
+	public void save(Customer c);
+	public void update(Customer c);
+	public void delete(int id);
 	
 }

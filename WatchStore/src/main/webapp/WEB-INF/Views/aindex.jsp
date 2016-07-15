@@ -50,12 +50,14 @@ li a:hover:not(.active) {
 </head>
 <body>
 <ul>
-  <li><a class="active" href= "<spring:url value="/"/>">HOME</a></li>
-   <li><a href="<spring:url value="/categories"/>">ALL CATEGORIES </a></li>  
-   <li><a href="<spring:url value="/ViewCustomers"/>">VIEW ALL CUSTOMERS</a></li>
-  <li><a href="<spring:url value="/viewProducts"/>">VIEW ALL PRODUCTS</a></li>
-  <li><a href="<spring:url value="/showAddProd"/>">ADD  NEW PRODUCT</a></li>
- 
+  <li><a class="active" href="home">Home</a></li>
+    <li><a href="showAddCust">Add New Customer</a></li>
+   <li><a href="viewCustomers">View All Customers</a></li>
+   <li><a href="showAddProd">Add New Product</a></li>
+   <li><a href="viewProducts">View All products</a></li>
+    <li><a href="aboutus">About Us</a></li>
+     <li><a href="logout">Logout</a></li>
+  
 </ul>
 
 <div class="container">

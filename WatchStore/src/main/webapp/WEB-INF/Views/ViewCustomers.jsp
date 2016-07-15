@@ -25,9 +25,9 @@
 		<nav class="navbar navbar-default">
   			<div class="container-fluid">
 	   			<ul class="nav navbar-nav">
-      				<li><a href="<spring:url value="/"/>">Home</a></li>
-    	  			<li><a href="<spring:url value="/aboutus"/>">About Us</a></li>
-    	  			<li><a href="<spring:url value="/logout"/>">Logout</a></li>  
+      				<li><a class="active" href="aindex">HOME</a></li>
+    <li><a href="aboutus">ABOUTUS</a></li>
+   <li><a href="logout">LOGOUT</a></li>
     			</ul>
   			</div>
 		</nav>

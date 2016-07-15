@@ -90,6 +90,15 @@ public class WatchController {
 		 } 
 		 
 	 
+	 @RequestMapping(value="/allCustomers", method=RequestMethod.GET)
+	 public ModelAndView allCust() {
+		 ModelAndView m1 = new ModelAndView("allCustomers");	
+		 
+		 System.out.println("Welcome to the allCustomers");
+		 return m1;
+		 } 
+		 
+	 
 	 
 	 @RequestMapping(value="/brands", method=RequestMethod.GET)
 	 public ModelAndView brands() {
@@ -98,6 +107,30 @@ public class WatchController {
 		 System.out.println("Welcome to the brands of products");
 		 return m1;
 		 } 
+	 
+	 
+	 
+	 @RequestMapping(value = "/logout", method = RequestMethod.GET)
+		public ModelAndView lgot() {
+			System.out.println("-----Log Controller-----");
+			m.setViewName("logout");
+			return m;
+		}
+
+		@RequestMapping(value = "/accessdenied", method = RequestMethod.GET)
+		public ModelAndView gohome1() {
+			System.out.println("-----Access Controller-----");
+			m.setViewName("accessdenied");
+			return m;
+		}
+		
+		
+
+	 
+	 
+	 
+	 
+	 
 	 
 
 		
@@ -139,7 +172,7 @@ public class WatchController {
 		public String addCustomerdetails(@ModelAttribute("cust")@Valid Customer cust,BindingResult result){
 			//m.setViewName("cindex");
 			try{
-			cobj.addCustomer(cust);
+			cobj.saveOrUpdate(cust);
 			} catch (Exception e) {
 
 			}
@@ -155,14 +188,14 @@ public class WatchController {
 		}
 
 	
-@RequestMapping(value="/showAddCust",method=RequestMethod.POST)
+@RequestMapping(value="/showAddCust",method=RequestMethod.GET)
 public ModelAndView showAddCust(){
 	m.setViewName("signUp");
 	m.addObject("command", new Customer());
 	return m;
 }
 
-		@RequestMapping(value = "/ViewCustomers", method = RequestMethod.GET)
+	/*	@RequestMapping(value = "/viewCustomers", method = RequestMethod.GET)
 		public ModelAndView viewuser() {
 			ModelAndView m = new ModelAndView();
 			m.setViewName("ViewCustomers");
@@ -175,29 +208,41 @@ public ModelAndView showAddCust(){
 			return m;
 		}
 
-		
+	*/	
+@RequestMapping(value = "/viewCustomers", method = RequestMethod.GET)
+public ModelAndView viewuser() {
+	ModelAndView m = new ModelAndView();
+	m.setViewName("ViewCustomers");
+	try {
+		m.addObject("ls", cobj.findAll());
+	} catch (Exception e) {
+		System.out.println("Unable to view Customers.\t" + e);
+		m.setViewName("aindex");
+	}
+	return m;
+}
 		@RequestMapping(value = "/updCu/{id}", method = RequestMethod.GET)
 		public ModelAndView updPdCust(@PathVariable("id") int id) {
 			m.setViewName("updateCustomer");
 			// m.addObject("command", pobj.viewProductById(id));
-			m.addObject("command", cobj.viewAllCustomers());
-			System.out.println(cobj.viewAllCustomers());
+			m.addObject("command", cobj.findById(id));
+			System.out.println(cobj.findById(id));
 			a = id;
 			return m;
 		}		
 		
-		@RequestMapping(value = "/updc", method = RequestMethod.POST)
+		@RequestMapping(value = "/updc", method = RequestMethod.GET)
 		public ModelAndView uCust(@ModelAttribute("WatchStore") Customer c) {
 			c.setId(a);
-			cobj.updateCustomer(c);
-			m.setViewName("redirect:/ViewCustomers");
+			cobj.saveOrUpdate(c);
+			m.setViewName("redirect:/viewCustomers");
 			return m;
 		}
 		
 		@RequestMapping(value = "/delCu/{id}", method = RequestMethod.GET)
 		public ModelAndView delCust(@PathVariable("id") int id) {
-			cobj.deleteCustomer(id);
-			m.setViewName("redirect:/ViewCustomers");
+			cobj.delete(id);
+			m.setViewName("redirect:/viewCustomers");
 			return m;
 		}
 		

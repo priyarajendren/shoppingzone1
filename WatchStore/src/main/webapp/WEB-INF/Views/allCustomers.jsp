@@ -97,14 +97,14 @@ li a:hover:not(.active)
   </div>
 
 </div>
-<form:form action="/WatchStore/addProd" method="post">
+<form:form action="/WatchStore/addCust"  command="cust" method="post">
 			<form:errors path="*" cssClass="formErrorBlock"/>
 			<table>
 				
 				<tr>
 					<td> <form:label path="name">Enter the your Name</form:label> </td>
 					<td> <form:input path="name"/> </td>
-					<td> <form:errors path="name" cssClass="formFeildError"/></td>
+					<td> <form:errors path="name"> </form:errors></td>
 				</tr>
 				
 				<tr>

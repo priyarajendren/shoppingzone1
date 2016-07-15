@@ -13,46 +13,38 @@ import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.watches.DAO.CustomerDAO;
 import com.watches.model.Customer;
 import com.watches.model.Product;
 
-
-
-@SuppressWarnings("unused")
-@Repository
+@Repository("custDao")
 public class CustomerDAOImpl implements CustomerDAO {
 
 	@Autowired
 	private SessionFactory sf;
-	/* (non-Javadoc)
-	 * @see com.shoes.DAO.CustomerDAO#addCustomer(com.shoes.model.Customer)
-	 */
-	@Transactional(propagation = Propagation.SUPPORTS, readOnly = false)
-	public void addCustomer(Customer c) {
-		// TODO Auto-generated method stub
-		Session s =sf.getCurrentSession();
-		Transaction t = s.beginTransaction();
-		c.setEnabled(true);
-		c.setRole("ROLE_USER");
-		s.saveOrUpdate(c);
-		t.commit();
-	}
 
-
-	/* (non-Javadoc)
-	 * @see com.shoes.DAO.CustomerDAO#viewAllCustomers()
-	 */
 	@SuppressWarnings("unchecked")
+
 	@Transactional(propagation = Propagation.SUPPORTS, readOnly = false)
-	public List<Customer> viewAllCustomers() {
-		Session s =sf.getCurrentSession();
-		Transaction t = s.beginTransaction();
-		List<Customer> l= (List<Customer>)sf.getCurrentSession().createCriteria(Customer.class).list();
-		t.commit();
-		return l;
+	public List<Customer> getItems() {		
+		Session session = sf.openSession();
+		Transaction tx = session.beginTransaction();
+		return (List<Customer>) sf.getCurrentSession().createCriteria(Customer.class).list();
 	}
-	
-	
+
+
+	@Transactional(propagation = Propagation.SUPPORTS, readOnly = false)
+	public Customer findById(Integer id) {
+		Session s =sf.openSession();
+		Transaction t = s.beginTransaction();
+		Customer persistentInstance = (Customer)s.load(Customer.class, id);
+		t.commit();
+		if (persistentInstance != null) {
+		    return persistentInstance;
+		}
+		return null;
+	}
+
 	
 	@Transactional(propagation = Propagation.SUPPORTS, readOnly = false)
 	public void save(Customer c) {
@@ -64,15 +56,18 @@ public class CustomerDAOImpl implements CustomerDAO {
 		   	trans.commit();
 				
 	}
-	
-	@Transactional(propagation = Propagation.SUPPORTS, readOnly = false)
-	public void updateCustomer(Customer c) {
-		// TODO Auto-generated method stub
-		sf.getCurrentSession().update(c);
 
+	@Transactional(propagation = Propagation.SUPPORTS, readOnly = false)
+	public void update(Customer c) {
+		Session s =sf.openSession();
+		Transaction t = s.beginTransaction();
+		Object persistentInstance = s.load(Customer.class, c.getId());
+		if (persistentInstance != null) {
+		    s.update(c);
+		}
+		t.commit();
 	}
-	@Transactional
-	public void delCustomer(int id) {
+	public void delete(int id) {
 		System.out.println(id);
 		
 		// TODO Auto-generated method stub
@@ -85,16 +80,6 @@ public class CustomerDAOImpl implements CustomerDAO {
 		t.commit();
 	
 	}
-
-
-	
-
-
-		
-	
-	
-	
-	
-	
      
 }
+

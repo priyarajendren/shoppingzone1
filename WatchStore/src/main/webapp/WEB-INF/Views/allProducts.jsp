@@ -48,11 +48,11 @@ li a:hover:not(.active) {
 </head>
 <body>
 <ul>
-<li><a class="active" href= "<spring:url value="/"/>">HOME</a></li>
-   <li><a href="<spring:url value="/login"/>">LOGIN</a></li>
-  <li><a href="<spring:url value="/brands"/>">BRANDS</a></li>   
-   <li><a href="<spring:url value="/allProducts"/>">OURSTORES</a></li>
-  <li><a href="<spring:url value="/aboutus"/>">ABOUTUS</a></li>
+<li><a class="active" href="/">HOME</a></li>
+    <li><a href="aboutus">ABOUTUS</a></li>
+   <li><a href="login">LOGIN</a></li>
+   <li><a href="allProducts">OURSTORES</a></li>
+   <li><a href="signUp">REGISTERHERE</a></li>
 </ul>
 
 </body>
@@ -86,6 +86,8 @@ li a:hover:not(.active) {
     
          
     <p>Model No.B13452.39.86 - Rs. 29,800-EMI available</p>
+
+
     <h3><b> VERSACE </b></h3> 
     <img src="<spring:url value="resources/images/watch12.jpg"/>" alt="watches" width="200" height="200"/>
     

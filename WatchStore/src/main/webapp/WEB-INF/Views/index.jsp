@@ -49,16 +49,26 @@ li a:hover:not(.active) {
 </style>
 </head>
 <body>
-<ul>
-  <li><a class="active" href= "<spring:url value="/"/>">HOME</a></li>
-   <li><a href="<spring:url value="/login"/>">LOGIN</a></li>
-  <li><a href="<spring:url value="/brands"/>">BRANDS</a></li>   
-   <li><a href="<spring:url value="/allProducts"/>">OURSTORES</a></li>
-     <li><a href="<spring:url value="/addProduct"/>">ADD PRODUCT</a></li>   
-  <li><a href="<spring:url value="/aboutus"/>">ABOUTUS</a></li>
-  <li><a href="<spring:url value="/viewProducts"/>">VIEW PRODUCTS</a></li>
-  
+
+
+
+<ul class ="nav navbar-nav navbar-right">
+<li><a href="signUp"><span class="glyphicon glyphicon-user"></span> Signup</a></li>
+<li><a href="login"><span class="glyphicon glyphicon-log-in"></span> login</a></li>
+
 </ul>
+
+
+
+
+
+<ul>
+   <li><a class="active" href="/">Home</a></li>    
+   <li><a href="categories">View Categories</a></li>
+    <li><a href="aboutus">About Us</a></li>
+    </ul>
+ 
+
 
 <div class="container">
   <br>

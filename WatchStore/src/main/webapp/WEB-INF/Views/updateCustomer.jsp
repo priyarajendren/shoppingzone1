@@ -39,35 +39,39 @@
 					<!--<td>${di.pid}</td>
 					<td><form:input path="id" disabled="true"/> </td>
 				</tr>-->
-				<tr>
-					<td> Enter Name</td>
-					<!--<td>${di.name}</td>-->
-					<td><form:input path="name"/></td>
-				</tr>
-				<tr>
-					<td>Email Id</td>
-					<!--<td>${di.pricetag}</td>-->
-					<td><form:input path="email"/></td>
-				</tr>
 				
 				<tr>
-					<td>password</td>
-					<!--<td>${di.password}</td>-->
-					<td><form:input path="pwd"/></td>
+					<td><form:label path="pid">Product Id:</form:label></td>
+					<td><form:input path="pid" /></td>
 				</tr>
 				
 				
 				<tr>
-					<td>address</td>
-					<!--<td>${di.address}</td>-->
-					<td><form:input path="addr"/></td>
+					<td><form:label path="name">Enter Name:</form:label></td>
+					<td><form:input path="name" /></td>
 				</tr>
 				
 				<tr>
-					<td>phone no</td>
-					<!--<td>${di.phone no}</td>-->
-					<td><form:input path="phno"/></td>
+					<td><form:label path="email">Email Id:</form:label></td>
+					<td><form:input path="email" /></td>
 				</tr>
+				
+				
+				<tr>
+					<td><form:label path="pwd">Password:</form:label></td>
+					<td><form:input path="pwd" /></td>
+				</tr>
+				
+				<tr>
+					<td><form:label path="addr">Address:</form:label></td>
+					<td><form:input path="addr" /></td>
+				</tr>
+				
+			<tr>
+					<td><form:label path="phno">Phone Number:</form:label></td>
+					<td><form:input path="phno" /></td>
+				</tr>
+				
 				
 				<tr>
 					<td><input type="submit" value="Update"></td>

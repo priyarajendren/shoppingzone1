@@ -46,7 +46,7 @@ li a:hover:not(.active) {
 
 
 <ul>
-  <li><a  href= "<spring:url value="/home"/>">HOME</a></li>
+  <li><a  href= "<spring:url value="/"/>">HOME</a></li>
   <li><a href="<spring:url value="/aboutus"/>">ABOUTUS</a></li>
 </ul>
 
