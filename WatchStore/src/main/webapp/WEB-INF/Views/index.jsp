@@ -1,3 +1,5 @@
+
+
 <html>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@taglib prefix="spring" uri="http://www.springframework.org/tags" %>
@@ -64,8 +66,8 @@ li a:hover:not(.active) {
 
 <ul>
    <li><a class="active" href="/">Home</a></li>    
-   <li><a href="categories">View Categories</a></li>
-    <li><a href="aboutus">About Us</a></li>
+   <li><a href="allProducts">Our Products</a></li>
+    
     </ul>
  
 

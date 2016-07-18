@@ -117,17 +117,16 @@ public class WatchController {
 			return m;
 		}
 
-		@RequestMapping(value = "/accessdenied", method = RequestMethod.GET)
+		
+		
+		
+
+	 @RequestMapping(value = "/accessdenied", method = RequestMethod.GET)
 		public ModelAndView gohome1() {
 			System.out.println("-----Access Controller-----");
 			m.setViewName("accessdenied");
 			return m;
 		}
-		
-		
-
-	 
-	 
 	 
 	 
 	 
@@ -170,7 +169,7 @@ public class WatchController {
 	 	
 @RequestMapping(value="/addCustomer", method=RequestMethod.POST)
 		public String addCustomerdetails(@ModelAttribute("cust")@Valid Customer cust,BindingResult result){
-			//m.setViewName("cindex");
+			
 			try{
 			cobj.saveOrUpdate(cust);
 			} catch (Exception e) {
@@ -184,7 +183,7 @@ public class WatchController {
 
 			else
 
-				return "cindex";
+				return "login";
 		}
 
 	

@@ -25,7 +25,7 @@
 		<nav class="navbar navbar-default">
   			<div class="container-fluid">
 	   			<ul class="nav navbar-nav">
-      				<li><a class="active" href="aindex">HOME</a></li>
+     <li><a href="aindex">HOME</a></li>
     <li><a href="aboutus">ABOUTUS</a></li>
    <li><a href="logout">LOGOUT</a></li>
     			</ul>

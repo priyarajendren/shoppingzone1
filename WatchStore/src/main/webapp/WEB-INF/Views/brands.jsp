@@ -52,7 +52,7 @@ li a:hover:not(.active) {
   <li><a class="active" href="<spring:url value="/brands"/>">BRANDS</a></li>   
    <li><a  href="<spring:url value="/allProducts"/>">OURSTORES</a></li>
   <li><a href="<spring:url value="/aboutus"/>">ABOUTUS</a></li>
-  <li><a href="<spring:url value="/allProducts"/>">ALL PRODUCTS</a></li>
+  <li><a href="<spring:url value="/logout"/>">Logout</a></li>
   
 </ul>
 

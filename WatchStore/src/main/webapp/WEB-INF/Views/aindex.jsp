@@ -50,13 +50,12 @@ li a:hover:not(.active) {
 </head>
 <body>
 <ul>
-  <li><a class="active" href="home">Home</a></li>
+  <li><a class="active" href="aindex">Home</a></li>
     <li><a href="showAddCust">Add New Customer</a></li>
    <li><a href="viewCustomers">View All Customers</a></li>
    <li><a href="showAddProd">Add New Product</a></li>
    <li><a href="viewProducts">View All products</a></li>
-    <li><a href="aboutus">About Us</a></li>
-     <li><a href="logout">Logout</a></li>
+   <li><a href="logout">Logout</a></li>
   
 </ul>
 

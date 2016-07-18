@@ -85,11 +85,11 @@ li a:hover:not(.active)
 <p> <h2 style="color:#3CGH42;"> Welcome to the shopping world of your Time!!!!!</h2> </p>
 <div>
  <ul>
-   <li><a  href= "<spring:url value="/"/>">HOME</a></li>
-   <li><a href="<spring:url value="/login"/>">LOGIN</a></li>
+   <li><a  href= "<spring:url value="/aindex"/>">HOME</a></li>
   <li><a href="<spring:url value="/brands"/>">BRANDS</a></li>   
    <li><a class="active" href="<spring:url value="/allProducts"/>">OURSTORES</a></li>
   <li><a href="<spring:url value="/aboutus"/>">ABOUTUS</a></li>
+  <li><a href="<spring:url value="/logout"/>">Logout</a></li>  
 </ul>
                
    

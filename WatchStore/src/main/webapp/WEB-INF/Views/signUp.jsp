@@ -1,3 +1,6 @@
+
+
+
 <%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <%@taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
@@ -84,7 +87,7 @@ li a:hover:not(.active)
 <p> <h2 style="color:#3CGH42;"> Welcome to the shopping world of your Time!!!!!</h2> </p>
 <div>
  <ul>
-   <li><a  href= "<spring:url value="/index"/>">HOME</a></li>
+   <li><a  href= "<spring:url value="/aindex"/>">HOME</a></li>
    
   <li><a href="<spring:url value="/aboutus"/>">ABOUTUS</a></li>
 </ul>
@@ -125,7 +128,7 @@ li a:hover:not(.active)
 					<td><form:input path="phno"/> </td>
 				</tr>
 				<tr>
-					<td><input class="btn btn-success" type="submit" value="SubmitDetails"/></td>
+					<td><input class="btn btn-success" type="submit" value="SubmitDetails" action="/login" /></td>
 					<td><input class="btn btn-danger" type="reset" value="Clear Data"/></td>
 				</tr>
 			</table>

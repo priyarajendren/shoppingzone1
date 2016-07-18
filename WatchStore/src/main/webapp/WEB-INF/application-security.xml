@@ -8,9 +8,9 @@ http://www.springframework.org/schema/context
 http://www.springframework.org/schema/context/spring-context-3.0.xsd
 http://www.springframework.org/schema/security
 http://www.springframework.org/schema/security/spring-security-3.1.xsd">
+
 <security:http auto-config="true" use-expressions="true">
 <security:intercept-url pattern="/" access="permitAll" />
-
 	<security:intercept-url pattern="/login" access="permitAll" />
 	<security:intercept-url pattern="/logout" access="permitAll"/>
 	<security:intercept-url pattern="/accessdenied" access="permitAll" />
@@ -41,8 +41,8 @@ http://www.springframework.org/schema/security/spring-security-3.1.xsd">
 		
 		
 		
-	<security:form-login login-page="/login" default-target-url="/cindex" authentication-failure-url="/accessdenied"/> 
-	<security:form-login login-page="/login" default-target-url="/aindex" authentication-failure-url="/accessdenied"/>
+	<security:form-login login-page="/login" default-target-url="/aindex" authentication-failure-url="/accessdenied"/> 
+	<security:form-login login-page="/login" default-target-url="/cindex" authentication-failure-url="/accessdenied"/>
 	
 </security:http>
  
@@ -50,8 +50,8 @@ http://www.springframework.org/schema/security/spring-security-3.1.xsd">
 <security:authentication-provider>
 <security:jdbc-user-service
 data-source-ref="dataSource"
-users-by-username-query="select username,password,enabled  from customer where username=?"
-authorities-by-username-query="select c.username, u.role_name from customer c, user_role u where c.id = u.user_id and c.username =?" />
+users-by-username-query="select name,pwd,enabled from customer where name=?"
+authorities-by-username-query="select name,role from customer where name = ?" />
 </security:authentication-provider>
 </security:authentication-manager>
  
