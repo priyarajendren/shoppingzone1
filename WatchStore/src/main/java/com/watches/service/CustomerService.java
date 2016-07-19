@@ -13,6 +13,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
+@SuppressWarnings("unused")
 @Service("CustomerService")
 public class CustomerService implements CustomerServDAO {
 
@@ -22,7 +23,7 @@ public class CustomerService implements CustomerServDAO {
 	
 	@Transactional(propagation = Propagation.SUPPORTS, readOnly = false)
 	public Customer findById(Integer id) {
-		// TODO Auto-generated method stub
+		
 		return cd.findById(id);
 	}
 	

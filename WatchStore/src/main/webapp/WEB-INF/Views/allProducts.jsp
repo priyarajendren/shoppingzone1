@@ -51,7 +51,6 @@ li a:hover:not(.active) {
 <li><a class="active" href="/">HOME</a></li>
     <li><a href="aboutus">ABOUTUS</a></li>
    <li><a href="login">LOGIN</a></li>
-   <li><a href="allProducts">OURSTORES</a></li>
    <li><a href="signUp">REGISTERHERE</a></li>
 </ul>
 

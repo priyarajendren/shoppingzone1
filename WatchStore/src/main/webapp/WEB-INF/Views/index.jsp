@@ -51,38 +51,25 @@ li a:hover:not(.active) {
 </style>
 </head>
 <body>
-
-
-
 <ul class ="nav navbar-nav navbar-right">
 <li><a href="signUp"><span class="glyphicon glyphicon-user"></span> Signup</a></li>
-<li><a href="login"><span class="glyphicon glyphicon-log-in"></span> login</a></li>
-
 </ul>
-
-
-
-
-
 <ul>
    <li><a class="active" href="/">Home</a></li>    
    <li><a href="allProducts">Our Products</a></li>
-    
-    </ul>
- 
-
-
+   <li><a href="cindex">Customer Login</a></li>
+   <li><a href="aindex">Admin Login</a></li>
+</ul>
 <div class="container">
-  <br>
-  <div id="myCarousel" class="carousel slide" data-ride="carousel">
-   
-    <ol class="carousel-indicators">
-      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-      <li data-target="#myCarousel" data-slide-to="1" ></li>
-      <li data-target="#myCarousel" data-slide-to="2" ></li>
-      <li data-target="#myCarousel" data-slide-to="3" ></li>
-          </ol>
-  
+<br>
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+<ol class="carousel-indicators">
+<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+<li data-target="#myCarousel" data-slide-to="1" ></li>
+<li data-target="#myCarousel" data-slide-to="2" ></li>
+<li data-target="#myCarousel" data-slide-to="3" ></li>
+</ol>
+
     <div class="carousel-inner" role="listbox">
 
       <div class="item active">

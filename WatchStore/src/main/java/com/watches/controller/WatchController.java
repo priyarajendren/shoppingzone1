@@ -22,6 +22,7 @@ import com.watches.model.Product;
 import com.watches.service.CustomerServDAO;
 import com.watches.service.ProductServDAO;
 
+@SuppressWarnings("unused")
 @Controller
 public class WatchController {
 	ModelAndView m = new ModelAndView();

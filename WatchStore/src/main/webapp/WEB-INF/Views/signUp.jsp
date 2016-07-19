@@ -1,6 +1,3 @@
-
-
-
 <%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <%@taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
@@ -116,7 +113,7 @@ li a:hover:not(.active)
 				</tr>
 				<tr>
 					<td><form:label path="pwd">Your Password</form:label></td>
-					<td><form:input path="pwd"/> </td>
+					<td><form:input type='password' path="pwd"/> </td>
 					<td><font color="red"><form:errors path="pwd"/></font></td>
 				</tr>
 				<tr>

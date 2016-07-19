@@ -17,17 +17,13 @@ public class ProductService implements ProductServDAO {
 
 	@Autowired
 	ProductDAO pd;
-	/* (non-Javadoc)
-	 * @see com.shoes.service.ProductServDAO#addProduct(com.shoes.model.Product)
-	 */
+	
 	@Transactional(propagation = Propagation.SUPPORTS, readOnly = false)
 	public void addProduct(Product p) {
 		pd.addProduct(p);
 	}
 
-	/* (non-Javadoc)
-	 * @see com.shoes.service.ProductServDAO#viewAllProducts()
-	 */
+	
 	@Transactional(propagation = Propagation.SUPPORTS, readOnly = false)
 	public List<Product> viewAllProducts() {
 		return pd.viewAllProducts();
